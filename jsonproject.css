@@ -1,0 +1,333 @@
+*{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+  overflow-y: scroll;
+  background: rgb(2,0,36);
+  margin:0;
+  min-height: 100vh;
+}
+
+header{
+  background-color: white;
+  margin-bottom: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+h1{
+  color: red;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* Senator Count images */
+.gallery{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  padding: 4px;
+}
+
+.gallery .box{
+  position: relative;
+  padding: 50px;
+}
+
+.imgBox{
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  border: 5px solid rgb(200, 0, 0)
+}
+
+.imgBox img{
+  width: 350px;
+  height: 350px;
+  opacity: 0.4;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.content{
+  position:absolute;
+  width: 80%;
+  top: 15%;
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.content p{
+  color: rgb(0,0,0);
+  font-weight: 600;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0px;
+  
+}
+
+#indos{
+  margin-top: 0;
+  font-size:80px;
+}
+
+#reps{
+  margin-top: 0;
+  font-size:80px;
+}
+
+#dems{
+  margin-top: 0;
+  font-size:80px;
+}
+
+h2{
+  color:white;
+  text-decoration: underline;
+  margin-left: 40px;
+  margin-bottom: 0px;
+}
+
+ul{
+  font-size: 25px;
+  color: white;
+  margin-top: 4px;
+}
+
+/* Table */
+table {
+  margin: auto;
+  width: 95%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-align: left;
+  background-color: rgb(189, 189, 189);
+}
+
+/* Table Header */
+table th{
+  background-color: rgb(200,0,0);
+  color: white;
+  padding: 0px;
+  border: 0px solid rgb(0, 0, 0);
+}
+
+/* Dropdown Buttons */
+.dropdown-container-party{
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 14%;
+  border: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 500px;
+}
+
+.dropdown-container-state{
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 16%;
+  border: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow-y:auto;
+  max-height: 300px;
+  scrollbar-width: none;
+}
+
+.dropdown-container-rank{
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 9%;
+  border: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 500px;
+}
+
+
+button{
+  width:100%;
+  height:100%;
+  font-size: 18px;
+  background: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  font-weight:bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+}
+
+.dropdown-btn {
+  width:100%;
+  height:100%;
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight:bold;
+  text-align: left;
+}
+
+/* Dropdown colour switching */
+.notselected{
+  width:100%;
+  height:100%;
+  font-size: 18px;
+  color: white;
+  background: rgb(125, 4, 4);
+  border: none;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  text-align: left;
+}
+
+.selected{
+  width:100%;
+  height:100%;
+  font-size: 18px;
+  color: white;
+  background: rgb(4, 125, 20);
+  border: none;
+  cursor: pointer;
+  font-weight:bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  text-align: left;
+}
+
+.notselected:hover{
+  background:rgb(254, 180, 180);
+  color: black;
+}
+
+.selected:hover{
+  background:rgb(185, 254, 180);
+  color: black;
+}
+
+#ranklong{
+  display:inline-block;
+}
+
+#rankshort{
+  display: none;
+}
+
+/* Table Content Change colour each Senator, dropdown to match */
+table tr:nth-child(4n+3){
+background-color: rgb(255, 255, 255);
+}
+
+table tr:nth-child(4n){
+background-color: rgb(255, 255, 255)
+}
+
+table tr:nth-child(odd){
+  cursor: pointer;
+}
+
+table tr:nth-child(odd):hover{
+  font-size: 100%;
+  background-color: rgb(185, 255, 255);
+}
+
+/* Senators  Dropdowns*/
+
+.sendets ul{
+  margin-top:3px;
+  margin-bottom: 3px;
+  margin-left: -20px;
+  color: black;
+}
+
+.sendets{
+  font-size: 18px;
+  vertical-align:top;
+}
+
+a{
+  color: rgb(67, 67, 207);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover{
+  color: rgb(116, 35, 170);
+}
+
+p{
+  color: black;
+  font-size: 30px;
+}
+
+footer{
+  background-color: white;
+  margin-top: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width:100%;
+  text-align: center;
+  border-top-left-radius: 100px;
+}
+
+footer p{
+  font-size: 25px;
+}
+
+#footlink{
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 1050px){
+
+  ul{
+    color: white;
+    margin-top: 4px;
+  }
+
+  .imgBox img{
+    width: 200px;
+    height: 200px;
+    opacity: 0.4;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+
+  .content{
+    padding: 10px;
+    margin-left: -15px;
+  }
+
+  #ranklong{
+    display: none;
+  }
+  
+  #rankshort{
+    display:inline-block;
+  }
+
+}
+

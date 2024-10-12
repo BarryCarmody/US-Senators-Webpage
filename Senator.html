@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="jsonproject.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senators</title>
+</head>
+<body>
+  <header>
+  <h1> US Senate</h1>
+  </header>
+
+  <div class="gallery">
+
+    <div class="box">
+      <div class="imgBox">
+          <img src="images/dems.jpg" alt="Democrat Party Logo">
+      </div>
+      <div class="content">
+          <p>Democrats</p> 
+          <p id="dems"></p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+          <img src="images/reps.jpg" alt="Republican Party Logo">
+      </div>
+      <div class="content">
+          <p>Republicans</p> 
+          <p id="reps"></p>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+          <img src="images/us.png" alt="Republican Party Logo">
+      </div>
+      <div class="content">
+          <p>Independents</p> 
+          <p id="indos"></p>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <h2>Leadership Positions</h2>
+  <div id="list"></div>
+
+  <table id="tablehead"></table>
+  <table id="table"></table>
+
+  <div class="bottom">
+    <footer>
+      <p>Click <a id="footlink"href="https://www.govtrack.us/">here</a> for further information.</p>
+    </footer>
+  </div>
+
+
+  <script defer src="jsonproject.js"></script>
+</body>
+</html>
+
+
